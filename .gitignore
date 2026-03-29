@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Large/raw data and generated outputs
+Dataset/
+predicted_final/
+*.mov
+*.mp4
+
+# Generated CSVs / eval outputs
+predictions*.csv
+final.csv
+groundtruth*.csv
+truth*.csv
+Train.csv
+Test.csv
+Validation.csv
+
+# Large training CSVs
+model/keypoint_classifier/keypoint.csv
+model/keypoint_classifier/keypointNew.csv
+model/keypoint_classifier/keypoint2.csv
+model/point_history_classifier/point_history.csv
