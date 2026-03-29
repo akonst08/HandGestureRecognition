@@ -50,7 +50,6 @@ def extract_normalized_landmarks_from_img(image):
 
 # Labels for extra rotations
 extra_rotation_labels = ["rock", "three"]
-
 # Process only the specified classes
 with open(output_csv, mode='a', newline='') as f:
     writer = csv.writer(f)
