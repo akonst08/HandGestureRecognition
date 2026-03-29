@@ -1,0 +1,8 @@
+HandGestureRecognition
+Copyright (c) 2026 Arestis Konstantinou
+
+This project includes work derived from an Apache-2.0 licensed MediaPipe hand gesture baseline.
+Modifications and extensions include:
+- 18-class gesture setup
+- custom preprocessing/augmentation scripts
+- retraining/evaluation workflow updates
