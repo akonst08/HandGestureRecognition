@@ -21,7 +21,7 @@ hands = mp_hands.Hands(static_image_mode=True, max_num_hands=1)
 # Augmentation function with increased rotation
 def augment_image(image):
     rows, cols = image.shape[:2]
-    angle = random.uniform(-45, 45)  # 🔥 Wider rotation range
+    angle = random.uniform(-45, 45)  #  Wider rotation range
     M_rot = cv2.getRotationMatrix2D((cols/2, rows/2), angle, 1)
     tx = random.uniform(-0.1, 0.1) * cols
     ty = random.uniform(-0.1, 0.1) * rows
@@ -81,7 +81,7 @@ with open(output_csv, mode='a', newline='') as f:
                 continue
 
             saved_count = 0
-            for i in range(8):  # 🔥 More variations
+            for i in range(8):  # More variations
                 aug_image = augment_image(image)
                 features = extract_normalized_landmarks_from_img(aug_image)
                 if features:
@@ -93,5 +93,5 @@ with open(output_csv, mode='a', newline='') as f:
                     print(f"✘ Skipped augmented: {label}/{filename} aug#{i+1}")
             print(f"🔹 Total saved augmentations for {label}/{filename}: {saved_count}/8")
 
-    print(f"✅ Augmentation and extraction complete!")
-    print(f"🔹 Total samples written: {total_saved}")
+    print(f" Augmentation and extraction complete!")
+    print(f" Total samples written: {total_saved}")
