@@ -57,6 +57,8 @@ def main():
     # Create directory to save frames
     output_frame_dir = "predicted_final"
     os.makedirs(output_frame_dir, exist_ok=True)
+    output_video_dir = "assets"
+    os.makedirs(output_video_dir, exist_ok=True)
 
     # Open CSV file to log predictions
     log_csv = open("final.csv", "w", newline="")
@@ -79,7 +81,7 @@ def main():
     #if not cap.isOpened():
     #    print("Error: Could not open video.")
     #    return
-    output_path = r"C:\Users\arest\Desktop\6th-SEMESTER\EPL445\Project\Group Project\panaetov1_annotated.mp4"
+    output_path = os.path.join(output_video_dir, "panaetov1_annotated.mp4")
     fourcc = cv.VideoWriter_fourcc(*'mp4v')
     fps = cap.get(cv.CAP_PROP_FPS)
     frame_width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
@@ -235,7 +237,7 @@ def main():
     
     cap.release()
     log_csv.close() ############ I added this 
-    #out.release() ######## Also for the input video/storing video on predictions
+    out.release()  ######## Also for the input video/storing video on predictions
     cv.destroyAllWindows()
 
 
@@ -603,3 +605,6 @@ def draw_info(image, fps, mode, number):
 
 if __name__ == '__main__':
     main()
+
+
+
