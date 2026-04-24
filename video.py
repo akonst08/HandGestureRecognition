@@ -81,9 +81,9 @@ sns.heatmap(df_cmx, annot=True, fmt='g', square=False,
             cmap='magma', annot_kws={"size": 12},
             cbar_kws={"shrink": 0.8})
 
-# Remove italics from tick labels
-ax.set_xticklabels(class_names, fontsize=12, rotation=45, fontstyle='normal')  # <--- key addition
-ax.set_yticklabels(class_names, fontsize=12, rotation=0, fontstyle='normal')   # Optional: for y-axis too
+
+ax.set_xticklabels(class_names, fontsize=12, rotation=45, fontstyle='normal')  # 
+ax.set_yticklabels(class_names, fontsize=12, rotation=0, fontstyle='normal')   # 
 
 ax.set_xlabel('Predicted Label', fontsize=14)
 ax.set_ylabel('True Label', fontsize=14)
